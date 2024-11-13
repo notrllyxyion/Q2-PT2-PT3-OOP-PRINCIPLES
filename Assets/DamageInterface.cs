@@ -1,8 +1,10 @@
 
+using System.Runtime.InteropServices.ComTypes;
 using UnityEngine;
 
-public interface DamageInterface 
+public interface DamageInterface
 {
-    void Damage(int damage);
+    void Attack(int attack);
+
 }
     

@@ -6,7 +6,7 @@ public class Archer : Base2
 {
     protected override void Onclick()
     {
-        Debug.Log("Archer says taenamo");
+        Debug.Log("Archer says boom panis");
     }
 
     protected override void Lol()

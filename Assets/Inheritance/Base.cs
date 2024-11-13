@@ -1,17 +1,18 @@
 
 using UnityEngine;
 
-public class Base : MonoBehaviour 
+public abstract class Base : MonoBehaviour , DamageInterface
 {
-    private int Health;
-   [SerializeField] public int Attack;
-    private int Defense;
-    private float Speed;
+     [SerializeField] public int health;
+     [SerializeField] public int attack;
+    [SerializeField]  public int defense;
+    [SerializeField]  public float speed;
 
-  protected void Displaying()
+
+    protected abstract void Hello();
+    protected abstract void Randomy();
+    public void Attack(int attack)
     {
-        Debug.Log("akina buhay mo" + Attack);
+       
     }
-
-   
 }

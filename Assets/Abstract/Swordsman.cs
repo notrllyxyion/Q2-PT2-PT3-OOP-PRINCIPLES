@@ -1,34 +1,35 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Search;
 using UnityEngine;
 
 public class Swordsman : Base2, DamageInterface
 {
-    protected override void Lol()
-    {
-        print("sapakan tayo by swordsman");
-    }
-
-    protected override void Onclick()
-    {
-        print("Swordsman wants to make sapakan");
-    }
 
     private void Start()
     {
         Onclick();
         Lol();
-        Debug.Log("Health: " + Health);
+        Attack(30);
+
     }
-    public void Damage(int damage)
+    protected override void Lol()
+    {
+        Debug.Log("sapakan tayo by Mercenary");
+    }
+
+    protected override void Onclick()
+    {
+        Debug.Log("Swordsman wants to kill Mercenary pero NABAWI! ");
+    }
+
+
+
+    public void Attack(int attack)
     {
         Debug.Log("Swordsman Health: " + Health);
-        Health -= damage;
-        Debug.Log("Swordsman health: " + Health);
-
-
+        Health -= attack;
+        Debug.Log("Swordsman Health attacked : " + Health);
     }
 
 }
